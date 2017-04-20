@@ -1,0 +1,66 @@
+{
+  "name": "active-ui",
+  "version": "1.0.0",
+  "description": "a powerful vue library",
+  "main": "index.js",
+  "author": "Ivan Warke",
+  "license": "MIT",
+  "dependencies": {
+    "vue-focus": "^2.1.0"
+  },
+  "directories": {
+    "src": "src/"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "scripts": {
+    "dev": "webpack --watch & npm run docs",
+    "docs": "browser-sync start --server --files ./docs --startPath ./docs",
+    "build": "webpack --progress --hide-modules --config  webpack.build.min.js && webpack --progress --hide-modules --config webpack.build.js",
+    "lint": "eslint --ext .js,.vue src || exit 0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.0",
+    "eslint-config-standart": "^0.2.0",
+    "eslint-friendly-formatter": "^2.0.7",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-html": "^2.0.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "ghooks": "^2.0.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "postcss-loader": "^1.3.3",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
+    "validate-commit-msg": "^2.12.1",
+    "vue": "^2.2.6",
+    "vue-hot-reload-api": "^2.1.0",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^11.3.4",
+    "vue-markdown-loader": "^0.6.2",
+    "vue-style-loader": "^3.0.0",
+    "vue-template-compiler": "^2.2.6",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "vueify"
+      ]
+    ]
+  }
+}
