@@ -65,7 +65,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var Components = [_button2.default];
 	
 	var install = function install(Vue, locale) {
-	  for (var i in components) {
+	  for (var i in Components) {
 	    Vue.component(i, Components[i]);
 	  }
 	

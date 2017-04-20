@@ -5,7 +5,7 @@ const Components = [
 ];
 
 const install = function (Vue, locale) {
-  for ( let i in components ) {
+  for ( let i in Components ) {
     Vue.component(i, Components[i]);
   }
 
@@ -14,7 +14,7 @@ const install = function (Vue, locale) {
 }
 
 if ( typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue);  
+  install(window.Vue);
 }
 
 Components.install = install;
