@@ -1,8 +1,9 @@
-import acButton from './button/'
+import acRaiseButton from './RaiseButton/'
+import './styles/main.less'
 
-const Components = [
-  acButton
-];
+const Components = {
+  acRaiseButton
+};
 
 const install = function (Vue, locale) {
   for ( let i in Components ) {

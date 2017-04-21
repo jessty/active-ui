@@ -1,26 +1,22 @@
 <template>
-  <button :disabled="disabled" class="ac-button"
+  <button :disabled="disabled" class="ac-RaiseButton"
     @click="handleClick"
-    :type="nativeType"
+    :label="label"
     :class="[
-      type ? 'ac-button--' + type : ''
+      label ? 'ac-RaiseButton-' + label : ''
     ]"
   >
+    <span><slot></slot></span>
   </button>
 </template>
 
 <script>
   export default {
-    name: 'acButton',
-
+    name: 'RaiseButton',
     props: {
-      type: {
+      label: {
         type: String,
         default: 'default'
-      },
-      nativeType: {
-        type: String,
-        default: 'button'
       },
       disabled: Boolean,
     },
