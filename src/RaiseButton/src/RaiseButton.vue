@@ -1,9 +1,16 @@
 <template>
-  <button :disabled="disabled" class="ac-RaiseButton"
+  <button  class="ac-RaiseBtn"
     @click="handleClick"
-    :label="label"
+    :primary="primary"
+    :secondary="secondary"
+    :disabled="disabled"
+    :style="style"
     :class="[
-      label ? 'ac-RaiseButton-' + label : ''
+      disabled || primary || secondary || (style && style.backgroundColor) ? '' : 'ac-RaiseBtn-default',
+
+      disabled ? 'ac-RaiseBtn-disabled' : '',
+      primary ? 'ac-RaiseBtn-primary' : '',
+      secondary ? 'ac-RaiseBtn-secondary' : '',
     ]"
   >
     <span><slot></slot></span>
@@ -11,20 +18,32 @@
 </template>
 
 <script>
+  import * as colors from './config/color'
   export default {
     name: 'RaiseButton',
+
     props: {
-      label: {
-        type: String,
-        default: 'default'
+      default: {
+        type: Boolean,
+        default: false
+      },
+      primary: {
+        type: Boolean,
+        default: false
+      },
+      secondary: {
+        type: Boolean,
+        default: false
+      },
+      style: {
+        type: Object
       },
       disabled: Boolean,
     },
-
     methods: {
       handleClick(evt) {
         this.$emit('click', evt);
-      }
+      },
     }
   };
 </script>
