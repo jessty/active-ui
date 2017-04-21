@@ -7,7 +7,6 @@
     :style="style"
     :class="[
       disabled || primary || secondary || (style && style.backgroundColor) ? '' : 'ac-RaiseBtn-default',
-
       disabled ? 'ac-RaiseBtn-disabled' : '',
       primary ? 'ac-RaiseBtn-primary' : '',
       secondary ? 'ac-RaiseBtn-secondary' : '',
