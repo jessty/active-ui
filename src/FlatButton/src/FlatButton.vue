@@ -1,15 +1,15 @@
 <template>
-  <button  class="ac-RaiseBtn"
+  <button  class="ac-FlatBtn"
     @click="handleClick"
     :primary="primary"
     :secondary="secondary"
     :disabled="disabled"
     :style="style"
     :class="[
-      disabled || primary || secondary || (style && style.backgroundColor) ? '' : 'ac-RaiseBtn-default',
-      disabled ? 'ac-RaiseBtn-disabled' : '',
-      primary ? 'ac-RaiseBtn-primary' : '',
-      secondary ? 'ac-RaiseBtn-secondary' : '',
+      disabled || primary || secondary || (style && style.backgroundColor) ? '' : 'ac-FlatBtn-default',
+      disabled ? 'ac-FlatBtn-disabled' : '',
+      primary ? 'ac-FlatBtn-primary' : '',
+      secondary ? 'ac-FlatBtn-secondary' : '',
     ]"
   >
     <i class="ac-fa ac-fa-spinner ac-fa-spin" v-if="!iconRight && loading"></i>

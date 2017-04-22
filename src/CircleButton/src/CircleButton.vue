@@ -1,22 +1,20 @@
 <template>
-  <button  class="ac-RaiseBtn"
+  <button  class="ac-CirBtn"
     @click="handleClick"
     :primary="primary"
     :secondary="secondary"
     :disabled="disabled"
+    :mini="mini"
     :style="style"
     :class="[
-      disabled || primary || secondary || (style && style.backgroundColor) ? '' : 'ac-RaiseBtn-default',
-      disabled ? 'ac-RaiseBtn-disabled' : '',
-      primary ? 'ac-RaiseBtn-primary' : '',
-      secondary ? 'ac-RaiseBtn-secondary' : '',
+      mini ? 'ac-CirBtn-mini' : '',
+      disabled || primary || secondary || (style && style.backgroundColor) ? '' : 'ac-CirBtn-default',
+      disabled ? 'ac-CirBtn-disabled' : '',
+      primary ? 'ac-CirBtn-primary' : '',
+      secondary ? 'ac-CirBtn-secondary' : '',
     ]"
   >
-    <i class="ac-fa ac-fa-spinner ac-fa-spin" v-if="!iconRight && loading"></i>
-    <i :class="['ac-fa', 'ac-fa-' + icon]" v-if="!iconRight && icon && !loading"></i>
-    <span><slot></slot></span>
-    <i class="ac-fa ac-fa-spinner ac-fa-spin" v-if="iconRight && loading"></i>
-    <i :class="['ac-fa', 'ac-fa-' + icon]" v-if="iconRight && icon && !loading"></i>
+    <i :class="['ac-fa', 'ac-fa-' + icon]"></i>
   </button>
 </template>
 
@@ -41,11 +39,10 @@
         type: String,
         default: ''
       },
-      iconRight: {
+      mini: {
         type: Boolean,
         default: false
       },
-      loading: Boolean,
       style: {
         type: Object
       },

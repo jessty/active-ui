@@ -1,32 +1,41 @@
-.@{prefix-cls}-RaiseBtn {
-  display: inline-block;
+.@{prefix-cls}-CirBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   outline: none;
   border: none;
   margin: 0;
   padding: 0 @RaiseButtonSpanPad;
-  height: @RaiseButtonH;
   line-height: @RaiseButtonH;
-  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
   transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
   border-radius: @RaiseButtonRadius;
-  text-align: center;
   font-weight: @RaiseButtonFtWeight;
-
+  font-size: @CircleButtonFS;
+  border-radius: 50%;
+  height: @CircleButtonH;
+  width: @CircleButtonH;
   > span {
     font-family: @default1FontFamily;
     text-transform: uppercase;
   }
 }
 
-.@{prefix-cls}-RaiseBtn-default {
+.@{prefix-cls}-CirBtn-mini {
+  height: @CircleButtonHMini !important;
+  width: @CircleButtonHMini !important;
+  font-size: @CircleButtonFSMini;
+}
+
+.@{prefix-cls}-CirBtn-default {
   background-color: @white;
   &:hover{
     background-color: rgba(153, 153, 153, 0.2);
   }
 }
 
-.@{prefix-cls}-RaiseBtn-primary {
+.@{prefix-cls}-CirBtn-primary {
   background-color: @primary1Color;
   color: @white;
   &:hover{
@@ -34,7 +43,7 @@
   }
 }
 
-.@{prefix-cls}-RaiseBtn-secondary {
+.@{prefix-cls}-CirBtn-secondary {
   background-color: @accent1Color;
   color: @white;
   &:hover{
@@ -42,8 +51,8 @@
   }
 }
 
-.@{prefix-cls}-RaiseBtn:disabled,
-.@{prefix-cls}-RaiseBtn-disabled{
+.@{prefix-cls}-CirBtn:disabled,
+.@{prefix-cls}-CirBtn-disabled{
   background-color: @disabled2Color;
   color: rgba(0, 0, 0, 0.6);
   cursor: default;

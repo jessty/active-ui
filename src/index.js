@@ -1,8 +1,12 @@
 import acRaiseButton from './RaiseButton/'
+import acFlatButton from './FlatButton/'
+import acCircleButton from './CircleButton/'
 import './styles/main.less'
 
 const Components = {
-  acRaiseButton
+  acRaiseButton,
+  acFlatButton,
+  acCircleButton
 };
 
 const install = function (Vue, locale) {
