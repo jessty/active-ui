@@ -12,7 +12,11 @@
       secondary ? 'ac-RaiseBtn-secondary' : '',
     ]"
   >
+    <i class="ac-fa ac-fa-spinner ac-fa-spin" v-if="!iconRight && loading"></i>
+    <i :class="['ac-fa', 'ac-fa-' + icon]" v-if="!iconRight && icon && !loading"></i>
     <span><slot></slot></span>
+    <i class="ac-fa ac-fa-spinner ac-fa-spin" v-if="iconRight && loading"></i>
+    <i :class="['ac-fa', 'ac-fa-' + icon]" v-if="iconRight && icon && !loading"></i>
   </button>
 </template>
 
@@ -34,6 +38,15 @@
         type: Boolean,
         default: false
       },
+      icon: {
+        type: String,
+        default: ''
+      },
+      iconRight: {
+        type: Boolean,
+        default: false
+      },
+      loading: Boolean,
       style: {
         type: Object
       },

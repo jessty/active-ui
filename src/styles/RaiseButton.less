@@ -4,7 +4,7 @@
   outline: none;
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 0 @RaiseButtonSpanPad;
   height: @RaiseButtonH;
   line-height: @RaiseButtonH;
   box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
@@ -14,12 +14,9 @@
   font-weight: @RaiseButtonFtWeight;
 
   > span {
-    padding-left: @RaiseButtonSpanPad;
-    padding-right: @RaiseButtonSpanPad;
     font-family: @default1FontFamily;
     text-transform: uppercase;
   }
-
 }
 
 .@{prefix-cls}-RaiseBtn-default {
@@ -45,6 +42,6 @@
 .@{prefix-cls}-RaiseBtn:disabled,
 .@{prefix-cls}-RaiseBtn-disabled{
   background-color: @disabled2Color;
-  color: rgba(0, 0, 0, 0.298039);
+  color: rgba(0, 0, 0, 0.6);
   cursor: default;
 }
