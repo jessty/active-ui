@@ -1,14 +1,19 @@
-import acRaiseButton from './RaiseButton/'
-import acFlatButton from './FlatButton/'
+import acAvatar from './Avatar/'
+import acChip from './Chip/'
 import acCircleButton from './CircleButton/'
-import Avatar from './Avatar/'
+import acFlatButton from './FlatButton/'
+import acRaiseButton from './RaiseButton/'
+
+
+
 import './styles/main.less'
 
 const Components = {
-  acRaiseButton,
-  acFlatButton,
+  acAvatar,
+  acChip,
   acCircleButton,
-  Avatar
+  acFlatButton,
+  acRaiseButton,
 };
 
 const install = function (Vue, locale) {

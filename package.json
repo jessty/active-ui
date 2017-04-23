@@ -1,6 +1,6 @@
 {
   "name": "active-ui",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A powerful Vue.js 2.0 UI Toolkit for Web",
   "main": "dist/ActiveUI.min.js",
   "author": "Ivan Warke",

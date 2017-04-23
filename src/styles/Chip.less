@@ -1,0 +1,41 @@
+.@{prefix-cls}-Chip {
+  display: inline-block;
+  height: @ChipH;
+  cursor: pointer;
+  border-radius: 16px;
+  background-color: @ChipBgColor;
+  position: relative;
+  padding-right: 22px;
+
+  &:hover {
+    background-color: @ChipBgColorHover;
+  }
+
+  > span {
+    font-size: @ChipFontSize;
+    font-weight: @ChipFontWeight;
+    padding-left: @ChipSpanPadding;
+    padding-right: @ChipSpanPadding;
+    line-height: @ChipH;
+    white-space: nowrap;
+  }
+
+  > i {
+    position: absolute;
+    width: @ChipIconSize;
+    height: @ChipIconSize;
+    line-height: @ChipLineHeight;
+    color: #fff;
+    opacity: @ChipIconOpacity;
+    background-color: @ChipIconBgColor;
+    border-radius: 50%;
+    text-align: center;
+    top: @ChipIconTop;
+    right: @ChipIconRight;
+    transition: @transition1ms450;
+  }
+
+  > i:hover{
+    background-color: @ChipIconBgColorHover;
+  }
+}
