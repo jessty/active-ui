@@ -1,7 +1,7 @@
-import Chip from './src/Chip';
+import acChip from './src/Chip';
 
-Chip.install = function(Vue) {
-  Vue.component(Chip.name, Chip);
+acChip.install = function(Vue) {
+  Vue.component(acChip.name, acChip);
 };
 
-export default Chip;
+export default acChip;
