@@ -1,34 +1,19 @@
-import acAvatar from './Avatar/'
-import acChip from './Chip/'
-import acCircleButton from './CircleButton/'
-import acFlatButton from './FlatButton/'
-import acRaiseButton from './RaiseButton/'
+import 'core-js/fn/array/find-index';
 
+import Button from './components/button';
 
-
-import './styles/main.less'
-
-const Components = {
-  acAvatar,
-  acChip,
-  acCircleButton,
-  acFlatButton,
-  acRaiseButton,
+const activeui = {
+  Button
 };
 
-const install = function (Vue, locale) {
-  for ( let i in Components ) {
-    Vue.component(i, Components[i]);
-  }
+const install = function (Vue, opts = {}) {
+  Object.keys(activeui).forEach((key) => {
+    Vue.component(key, activeui[key]);
+  });
+};
 
-  // Vue.directive('')
-  window.acLocale = locale || 'zh'
-}
-
-if ( typeof window !== 'undefined' && window.Vue) {
+if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
-Components.install = install;
-
-module.exports = Components;
+module.exports = Object.assign( activeui, {install} );
