@@ -1,30 +1,88 @@
 @btn-prefix-cls: ~"@{css-prefix}btn";
 
-.@{btn-prefix-cls} { // ac-btn
-  // .btn;
-  // .btn-default;
+.@{btn-prefix-cls} {
+    .btn;
+    .btn-default;
 
-  &-long {
-    width: 100%;
-  }
+    &-long{
+        width: 100%;
+    }
 
-  & > .ac-icon + span, & > span + .ac-icon {
-    margin-left: 4px;
-  }
+    & > .@{css-prefix}icon + span, & > span + .@{css-prefix}icon{
+        // margin-left: 2px;
+    }
 
-  // &:before {
-  //   position: absolute;
-  //   top: -1px;
-  //   left: -1px;
-  //   bottom: -1px;
-  //   right: -1px;
-  //   background: #fff;
-  //   opacity: 0.35;
-  //   content: '',
-  //   border-radius: inherit;
-  //   z-index: 1;
-  //   transition: opacity @transition-time;
-  //   pointer-events: none;
-  //   display: none;
-  // }
+    &-primary {
+        .btn-primary;
+    }
+
+    &-ghost {
+        .btn-ghost;
+    }
+
+    &-dashed{
+        .btn-dashed;
+    }
+
+    &-text{
+        .btn-text;
+    }
+
+    &-accent{
+        .btn-color(@accent-color);
+    }
+
+    &-success {
+        .btn-color(@success-color);
+    }
+
+    &-warning {
+        .btn-color(@warning-color);
+    }
+
+    &-error {
+        .btn-color(@error-color);
+    }
+
+    &-info {
+        .btn-color(@info-color);
+    }
+
+    &-circle,
+    &-circle-outline {
+        .btn-circle(@btn-prefix-cls);
+    }
+
+    &:before {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        bottom: -1px;
+        right: -1px;
+        background: #fff;
+        opacity: 0.35;
+        content: '';
+        border-radius: inherit;
+        z-index: 1;
+        transition: opacity @transition-time;
+        pointer-events: none;
+        display: none;
+    }
+
+    &&-loading {
+        pointer-events: none;
+        position: relative;
+
+        &:before {
+            display: block;
+        }
+    }
+
+    &-group {
+        .btn-group(@btn-prefix-cls);
+    }
+
+    &-group-vertical {
+        .btn-group-vertical(@btn-prefix-cls);
+    }
 }
