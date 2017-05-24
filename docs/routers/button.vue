@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>Button 按钮</h1>
+    <h2>基础组件</h2>
     <Button>Default</Button>
     <Button type="primary">Primary</Button>
     <Button type="ghost">Ghost</Button>
@@ -39,16 +41,16 @@
     <br><br>
     <Button>Default</Button>
     <Button disabled>Default(Disabled)</Button>
-    <br>
+    <br><br>
     <Button type="primary">Primary</Button>
     <Button type="primary" disabled>Primary(Disabled)</Button>
-    <br>
+    <br><br>
     <Button type="ghost">Ghost</Button>
     <Button type="ghost" disabled>Ghost(Disabled)</Button>
-    <br>
+    <br><br>
     <Button type="dashed">Dashed</Button>
     <Button type="dashed" disabled>Dashed(Disabled)</Button>
-    <br>
+    <br><br>
     <Button type="text">Text</Button>
     <Button type="text" disabled>Text(Disabled)</Button>
   </div>

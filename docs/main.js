@@ -15,6 +15,14 @@ const router = new VueRouter({
     {
       path: '/button',
       component: require('./routers/button.vue')
+    },
+    {
+      path: '/color',
+      component: require('./routers/color.vue')
+    },
+    {
+      path: '/icon',
+      component: require('./routers/icon.vue')
     }
   ]
 });

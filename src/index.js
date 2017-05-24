@@ -1,9 +1,11 @@
 import 'core-js/fn/array/find-index';
 
 import Button from './components/button';
+import Icon from './components/icon';
 
 const activeui = {
-  Button
+  Button,
+  Icon
 };
 
 const install = function (Vue, opts = {}) {
