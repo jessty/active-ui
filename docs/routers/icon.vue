@@ -40,8 +40,8 @@ input:focus::-webkit-input-placeholder{
 </template>
 
 <script>
-import IonicX from "./icon/IonicX.vue";
-import iconset from "./icon/iconset";
+import IonicX from "./utils/icon/IonicX.vue";
+import iconset from "./utils/icon/iconset";
 
 export default {
   components: { IonicX },

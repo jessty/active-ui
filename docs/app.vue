@@ -3,12 +3,12 @@
   @import "./styles/normalize";
 </style>
 <style>
-nav { margin: 20px 0 40px; width: 20%; float: left;}
+nav { margin: 17px 0 40px; width: 16%; float: left; font-size: 14px; }
 ul { display: flex; flex-flow: column wrap; }
-li { display: inline-block; }
+li { display: inline-block; margin: 3px 0; }
 /*li + li { border-left: solid 1px #bbb; padding-left: 10px; margin-left: 10px;}*/
-.container{ padding: 10px 40px; }
-nav + div { width: 80%; float: left;}
+.container{ padding: 10px 80px; }
+nav + div { width: 84%; float: left;}
 .v-link-active { color: #bbb; }
 </style>
 
